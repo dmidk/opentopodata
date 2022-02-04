@@ -1,0 +1,17 @@
+# 400 error will be thrown above this limit.
+max_locations_per_request: 1000
+
+# CORS header. Should be null for no CORS, '*' for all domains, or a url with
+# protocol, domain, and port ('https://api.example.com/'). Default is null.
+access_control_allow_origin: "*"
+
+datasets:
+
+# A small testing dataset is included in the repo.
+- name: test-dataset
+  path: tests/data/datasets/test-etopo1-resampled-1deg/
+
+- name: eudem25m
+  path: data/eudem-buffered/
+  filename_epsg: 3035
+  filename_tile_size: 1000000
